@@ -28,14 +28,16 @@
     "pretest": "yarn build && yarn lint"
   },
   "dependencies": {
+    "@types/mysql": "^2.15.2",
+    "mysql": "^2.15.0",
     "typescript-rest": "^1.1.1",
     "typescript-rest-swagger": "0.0.10"
   },
   "devDependencies": {
     "@types/chai": "^4.0.2",
+    "@types/cors": "^2.8.1",
     "@types/mocha": "^2.2.41",
     "@types/request": "0.0.43",
-    "@types/cors": "^2.8.1",
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.5.0",

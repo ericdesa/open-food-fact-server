@@ -1,4 +1,5 @@
-import {GET, Path, PathParam} from 'typescript-rest';
+import { GET, Path, PathParam } from 'typescript-rest';
+import { Database } from '../services/database';
 
 /**
  * This is a demo operation to show how to use typescript-rest library.
@@ -11,7 +12,9 @@ export class HelloController {
      */
     @Path(':name')
     @GET
-    sayHello(@PathParam('name') name: string): string {
-        return 'Hello ' + name;
+    async sayHello( @PathParam('name') name: string): Promise<string> {
+        let result = await Database.query(`select * from products limit 1`);
+        return result;
     }
+
 }
