@@ -5,7 +5,6 @@
       true,
       "check-space"
     ],
-    "curly": true,
     "eofline": true,
     "indent": [
       true,
@@ -72,9 +71,12 @@
       "check-whitespace"
     ],
     "radix": true,
-    "semicolon": [true, "always"],
+    "semicolon": [
+      true,
+      "always"
+    ],
     "switch-default": true,
-    "prefer-const": true,
+    "prefer-const": false,
     "no-string-throw": true,
     "triple-equals": [
       true,
