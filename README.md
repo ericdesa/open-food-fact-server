@@ -19,3 +19,4 @@ yarn start
 ## Sources
 - Données: https://fr.openfoodfacts.org/data 
 - Template du projet: https://github.com/vrudikov/typescript-rest-boilerplate
+- Connexion à MySQL: https://codeforgeek.com/2015/01/nodejs-mysql-tutorial/
