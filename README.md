@@ -1,42 +1,21 @@
-# Initial setup
+# OpenFoodFact Server
+Serveur d'une future application permettant de scanner le code barre d'un produit et d'en décrypter la composition.
+
+Ce projet est avant tout pédagogique: je cherche à m'initier au développement d'une API NODE.
+
+## Prérequis
+- télécharger la BDD sous forme de CSV: http://fr.openfoodfacts.org/data/fr.openfoodfacts.org.products.csv
+- l'importer dans une base mysql
+- créer le fichier environements/prod.env.ts sur le modèle de environements/example.env.ts
+
+## Premier lancement
 ```
-npm install
+nvm use
+yarn install
+yarn setup:env:prod
+yarn start
 ```
 
-# Project run
-```
-npm start
-```
-
-## Start project in cluster
-```
-npm start:cluster
-```
-
-## Swagger Docs Generation
-
-```
-npm run swagger
-```
-
-## Test
-
-```
-npm run test
-```
-
-### Test with coverage reports:
-
-```
-npm run test:coverage
-```
-
-The coverage report will be saved under ```./coverage``` folder.
-
-## Generate Docs
-
-```
-npm run doc
-```
-
-The project documentation will be saved under ```./doc``` folder.
+## Sources
+- Données: https://fr.openfoodfacts.org/data 
+- Template du projet: https://github.com/vrudikov/typescript-rest-boilerplate
