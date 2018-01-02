@@ -26,11 +26,12 @@ export class Database {
         });
     }
 
-    public static async query(request: string): Promise<any> {
+    public static async query(query: string, parameters: any[] = []): Promise<any> {
         let connection = await Database.getConnection();
+        let formattedQuery = connection.format(query, parameters);
 
         return new Promise<any>((resolve, reject) => {
-            connection.query(request, ((error: MysqlError, result: any) => {
+            connection.query(formattedQuery, ((error: MysqlError, result: any) => {
                 connection.release();
                 if (error) reject(error);
                 else resolve(result);

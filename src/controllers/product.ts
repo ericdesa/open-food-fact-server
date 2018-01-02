@@ -4,16 +4,17 @@ import { Database } from '../services/database';
 /**
  * This is a demo operation to show how to use typescript-rest library.
  */
-@Path('/hello')
-export class HelloController {
+@Path('/product')
+export class ProductController {
     /**
      * Send a greeting message.
      * @param name The name that will receive our greeting message
      */
-    @Path(':name')
+    @Path(':barcode')
     @GET
-    async sayHello( @PathParam('name') name: string): Promise<string> {
-        let result = await Database.query(`select * from products limit 1`);
+    async searchFromBarcode( @PathParam('barcode') barcode: string): Promise<string> {
+        let query = `select * from products where code = ? limit 1`;
+        let result = await Database.query(query, [barcode]);
         return result;
     }
 

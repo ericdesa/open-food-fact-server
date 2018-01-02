@@ -1,4 +1,3 @@
-import {HelloController} from './hello-controller';
-import {HelloObjectController} from './hello-object-controller';
+import { ProductController } from './product';
 
-export default [HelloController, HelloObjectController];
+export default [ProductController];
