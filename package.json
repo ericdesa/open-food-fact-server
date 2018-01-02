@@ -7,7 +7,7 @@
   "scripts": {
     "============================== Build =============================": "",
     "------------------------------- Dev ------------------------------": "",
-    "start": "yarn ts-node src/index.ts",
+    "start": "yarn nodemon",
     "start:cluster": "yarn ts-node src/cluster.ts",
     "----------------------------- Release ----------------------------": "",
     "build": "yarn clean && tsc && yarn swagger",
@@ -41,6 +41,7 @@
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
+    "nodemon": "^1.14.7",
     "nyc": "^10.3.2",
     "request": "^2.81.0",
     "rimraf": "^2.6.1",
