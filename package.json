@@ -22,6 +22,8 @@
     "------------------------------- Doc ------------------------------": "",
     "doc": "typedoc --out ./doc/ --name 'Typescript-rest-Boilerplate' --readme ./README.MD --module commonjs --target ES6 --includeDeclarations --excludePrivate --excludeExternals ./src",
     "swagger": "swaggerGen -c ./swagger.config.json",
+    "----------------------------- Docker -----------------------------": "",
+    "docker:build": "docker build -t ericdesa/open-food-facts-server .",
     "============================== Tests =============================": "",
     "test:coverage": "nyc yarn test",
     "test": "mocha",
