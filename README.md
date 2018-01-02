@@ -16,6 +16,12 @@ yarn setup:env:prod
 yarn start
 ```
 
+## Stack
+- NodeJS
+- Typescript
+- MySQL
+- Docker
+
 ## Sources
 - Données: https://fr.openfoodfacts.org/data 
 - Template du projet: https://github.com/vrudikov/typescript-rest-boilerplate
